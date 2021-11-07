@@ -50,12 +50,12 @@ def heating_calc_money(consumption, tariffs):
     return tariffs['heating'] * consumption
 
 
-def calculate_money(tariffs):
+def calculate_money():
     consumptions = calculate_consumption(old_data, new_data)
     con_cold_water = consumptions["cold_water"]
     con_hot_water = consumptions["hot_water"]
     con_electricity = consumptions["electricity"]
-    con_heating = consumptions["heating"]
+    con_heating = consumptions["heat"]
     return (
             cold_water_calc_money(con_cold_water, tariffs)
             + hot_water_calc_money(con_hot_water, tariffs)
@@ -65,3 +65,4 @@ def calculate_money(tariffs):
 
 
 print(calculate_consumption(old_data, new_data))
+print(calculate_money())
