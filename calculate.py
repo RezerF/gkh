@@ -1,9 +1,14 @@
-new_data = {
-    "cold_water": 22,
-    "hot_water": 10,
-    "electricity": 123,
-    "heat": 213,
-}
+
+def get_new_data():
+    new_data = {
+        "cold_water": float(input("cold_water")),
+        "hot_water": float(input("hot_water")),
+        "electricity": float(input("electricity")),
+        "heat": float(input("heat")),
+    }
+    return new_data
+
+
 old_data = {
     "cold_water": 20,
     "hot_water": 9,
@@ -12,11 +17,11 @@ old_data = {
 }
 
 tariffs = {
-    "water_in": 2,
-    "water_out": 2,
-    "heating_water": 2,
-    "electricity": 2,
-    "heating": 2,
+    "water_in": 24.53,
+    "water_out": 29.9,
+    "heating_water": 2199.18,
+    "electricity": 4.29,
+    "heating": 2199.18,
 }
 
 
@@ -50,8 +55,8 @@ def heating_calc_money(consumption, tariffs):
     return tariffs['heating'] * consumption
 
 
-def calculate_money():
-    consumptions = calculate_consumption(old_data, new_data)
+def calculate_money(consumptions):
+    # consumptions = calculate_consumption(old_data, new_data)
     con_cold_water = consumptions["cold_water"]
     con_hot_water = consumptions["hot_water"]
     con_electricity = consumptions["electricity"]
@@ -63,6 +68,6 @@ def calculate_money():
             + heating_calc_money(con_heating, tariffs)
     )
 
-
-print(calculate_consumption(old_data, new_data))
-print(calculate_money())
+#
+# print(calculate_consumption(old_data, new_data))
+# print(calculate_money())

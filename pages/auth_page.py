@@ -5,10 +5,10 @@ import constants
 
 class AuthPage(BasePage):
     def __init__(self, driver, url):
-        # super.__init__(driver, url)
         super().__init__(driver, url)
 
     URL = ""
+
     def login_insert(self):
         self.driver.find_element(*AuthPageLocators.LOGIN).send_keys(constants.LOGIN)
 
