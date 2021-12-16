@@ -15,5 +15,7 @@ def test_1(driver):
     consumptions = calculate.calculate_consumption(old_data, new_data)
     money = calculate.calculate_money(consumptions)
     print(money)
+    page.fill_new_data(new_data)
+    page.send_new_data()
 
 

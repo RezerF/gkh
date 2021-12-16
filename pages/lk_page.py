@@ -31,4 +31,10 @@ class LkPage(BasePage):
     def get_electricity_old_data(self):
         return self.driver.find_element(*ConsumptionsPageLocators.ELECTRICITY_OLD).text
 
+    def fill_new_data(self, data):
+        pass
+
+    def send_new_data(self):
+        pass
+
 
